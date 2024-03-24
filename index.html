@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fluid Smoke in WebGL</title>
+  </head>
+  <body style="margin: 0; overflow: hidden">
+    <canvas style="width: 100vw; height: 100vh"></canvas>
+    <script type="importmap">
+      {
+        "imports": {
+          "fluid-smoke-webgl-react": "./build/index.js"
+        }
+      }
+    </script>
+    <script type="module">
+      import webGLFluidEnhanced from 'fluid-smoke-webgl-react';
+      webGLFluidEnhanced.simulation(document.querySelector('canvas'));
+    </script>
+  </body>
+</html>
